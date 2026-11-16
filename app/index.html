@@ -244,7 +244,7 @@ async function send(mode) {
     else if (mode === 'draft') msg('Sent to your TikTok inbox. Open the TikTok app to finish and post it.', 'ok');
     else msg('Uploaded. It may take a few minutes for the video to process and appear on your profile.', 'ok');
     loadQueue();
-  } catch (e) { msg('Failed: ' + e.message, 'err'); }
+  } catch (e) { msg('Failed: ' + (e.code ? '[' + e.code + '] ' : '') + e.message, 'err'); }
   validate();
 }
 $('publishBtn').onclick = () => send('direct');
