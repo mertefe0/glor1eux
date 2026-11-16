@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>glor1eux – Connecting…</title>
+<style>body{font-family:system-ui,sans-serif;background:#0f0f14;color:#ececf1;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}a{color:#e63946}</style></head>
+<body><div><h2>Connecting your TikTok account…</h2><p id="m">Returning to glor1eux.</p></div>
+<script>
+// TikTok buraya ?code=...&state=... ile doner; kodu bilgisayardaki glor1eux sunucusuna iletir.
+var target = 'http://localhost:8787/auth/callback' + location.search;
+if (!location.search) { document.getElementById('m').textContent = 'Nothing to do here.'; }
+else { location.replace(target); setTimeout(function(){ document.getElementById('m').innerHTML = 'If nothing happens, make sure glor1eux is running on this computer and <a href="'+target+'">click here</a>.'; }, 3000); }
+</script></body></html>
